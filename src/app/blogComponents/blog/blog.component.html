@@ -1,0 +1,25 @@
+<div class="mainDiv">
+  <button class="btnArticle fontTypeSmall" routerLink="/create-article">
+    Make New Article
+  </button>
+  <div
+    [routerLink]="'/view/' + i"
+    class="card fontTypeSmall"
+    *ngFor="let article of articlesData; let i = index"
+  >
+    <h2 class="title">{{ article.title }}</h2>
+    <p class="author">{{ article.author }}</p>
+    <p class="description">{{ article.content }}</p>
+  </div>
+  <div class="btnBack">
+    <button class="btnBackStyle fontTypeSmall" routerLink="/options">
+      <span
+        class="material-symbols-outlined"
+        style="margin-top: 0; margin-right: 15px; font-size: 20px"
+      >
+        arrow_back
+      </span>
+      Back
+    </button>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+{
+  "users": [
+    {
+      "id": "b31d",
+      "email": "yusrak.kuloglu@gmail.com",
+      "username": "yusra",
+      "password": "12345678910"
+    },
+    {
+      "id": "2",
+      "email": "yusra.kuloglu@gmail.com",
+      "username": "yusra",
+      "password": "yusra12234566"
+    }
+  ],
+  "questions": [],
+  "articles": [
+    {
+      "id": "06e7",
+      "author": "yusrakulogly",
+      "title": "Title1",
+      "content": "Hello Hi",
+      "comments": [
+        {
+          "username": "",
+          "comment": ""
+        }
+      ]
+    }
+  ]
+}

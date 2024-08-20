@@ -1,0 +1,118 @@
+.mainDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  width: 100%;
+}
+.card {
+  display: flex;
+  width: 40vw;
+  flex-direction: column;
+}
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(169, 175, 180);
+  padding: 20px 30px;
+  width: 500px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  box-shadow: black 0px 0px 10px -3px;
+  margin-left: 40px;
+}
+.comments {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+.title,
+.author,
+.description {
+  margin: 10px 0px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+.formBox {
+  position: relative;
+  width: 100%;
+}
+.formBox input {
+  width: 100%;
+  padding: 13px 0;
+  font-size: 16px;
+  color: #000000;
+  border: none;
+  border-bottom: 1px solid #000000;
+  outline: none;
+  background: transparent;
+  margin-bottom: 20px;
+}
+.formBox input::placeholder {
+  color: transparent;
+}
+
+.formBox label {
+  position: absolute;
+  display: flex;
+  top: 0px;
+  left: 0;
+  padding: 8px 10px;
+  font-size: 15px;
+  color: black;
+  pointer-events: none;
+  transition: 0.3s ease all;
+}
+
+.formBox input:focus::placeholder {
+  color: transparent;
+}
+.formBox input:focus ~ label,
+.formBox input:not(:placeholder-shown) ~ label {
+  color: transparent;
+  transition: none;
+}
+.btnSave {
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  color: rgb(11, 11, 11);
+  padding: 12px 15px;
+  transition: none;
+  width: 20vw;
+  box-shadow: rgb(0, 0, 0) 0px 0px 13px -4px;
+  border-radius: 10px;
+  background: rgb(217, 225, 217);
+  font-weight: 500 !important;
+  margin-top: 20px;
+}
+.btnSaveDiv {
+  display: flex;
+  justify-content: center;
+}
+.btnBack {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+}
+.btnBackStyle {
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  color: rgb(254, 246, 237);
+  padding: 10px 15px;
+  transition: 2s;
+  width: 120px;
+  box-shadow: rgb(0, 0, 0) 0px 0px 13px -4px;
+  border-radius: 10px;
+  background: rgb(223, 28, 113);
+  font-weight: 500 !important;
+  display: flex;
+  align-items: center;
+}

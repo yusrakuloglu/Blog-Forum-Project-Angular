@@ -1,0 +1,79 @@
+.row {
+  display: flex;
+  margin: 20px 70px;
+  padding: 20px;
+}
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 530px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: black 0px 0px 6px -3px;
+  padding: 30px;
+  margin-right: 20px;
+  transition: 2s ease-out;
+}
+.firstSide {
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+}
+.secondSide {
+  display: flex;
+  flex-direction: column;
+}
+
+.arrowButton {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 20px;
+}
+.buttonTitle {
+  margin-right: 10px;
+}
+.buttonTitle:hover {
+  border-bottom: 1px solid black;
+}
+.cardContent {
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    visibility 0s,
+    opacity 0.5s ease;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: black 0px 0px 12px -3px;
+  transition: 0.5s ease all;
+}
+.card:hover .cardContent {
+  visibility: visible;
+  opacity: 1;
+}
+img {
+  transition:
+    transform 1s ease,
+    opacity 0.5s ease;
+  width: 250px;
+}
+.picture {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.card:hover img {
+  transform: translateY(-100px);
+  opacity: 0;
+}
+.card:hover .picture {
+  align-items: flex-start;
+}

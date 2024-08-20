@@ -1,0 +1,57 @@
+.mainDiv {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(169, 175, 180);
+  margin-top: 20px;
+  padding: 20px 10px;
+  width: 400px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  box-shadow: black 0px 0px 10px -3px;
+}
+.btnArticle {
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  color: rgb(11, 11, 11);
+  padding: 8px 15px;
+  transition: 2s;
+  width: 160px;
+  box-shadow: rgb(0, 0, 0) 0px 0px 13px -4px;
+  border-radius: 10px;
+  background: rgb(217, 225, 217);
+  font-weight: 500 !important;
+}
+.title,
+.author,
+.description {
+  margin: 9px;
+}
+
+.btnBack {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+}
+.btnBackStyle {
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  color: rgb(254, 246, 237);
+  padding: 10px 15px;
+  transition: 2s;
+  width: 120px;
+  box-shadow: rgb(0, 0, 0) 0px 0px 13px -4px;
+  border-radius: 10px;
+  background: rgb(223, 28, 113);
+  font-weight: 500 !important;
+  display: flex;
+  align-items: center;
+}

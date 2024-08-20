@@ -1,0 +1,66 @@
+.contentMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+.textArea {
+  background-color: rgb(244, 227, 235);
+  border: none;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  padding: 10px;
+}
+.btnContent {
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+  padding: 8px 10px;
+  transition: none;
+  width: 110px;
+  box-shadow: rgb(0, 0, 0) 0px 0px 13px -4px;
+  border-radius: 10px;
+  background: rgb(196, 206, 207);
+  font-weight: 400 !important;
+}
+.contentCard {
+  margin: 0px;
+  margin-top: 30px;
+  background-color: rgb(131, 131, 130);
+  padding: 20px;
+  width: 100px;
+  border-radius: 9px;
+  box-shadow: black 0px 2px 9px -2px;
+  text-align: left;
+  width: 100%;
+  max-width: 580px;
+  box-sizing: border-box;
+}
+
+.btnContent:disabled {
+  cursor: default;
+  background-color: rgb(189, 188, 186);
+  color: rgb(117, 115, 115);
+}
+
+.btnBack {
+  position: fixed;
+  bottom: 50px;
+  left: 50px;
+}
+.btnBackStyle {
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  color: rgb(254, 246, 237);
+  padding: 10px 15px;
+  transition: 2s;
+  width: 120px;
+  box-shadow: rgb(0, 0, 0) 0px 0px 13px -4px;
+  border-radius: 10px;
+  background: rgb(223, 28, 113);
+  font-weight: 500 !important;
+  display: flex;
+  align-items: center;
+}

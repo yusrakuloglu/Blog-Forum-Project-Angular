@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="formContainer">
+    <form class="form">
+      <div class="formBox">
+        <input
+          placeholder=" "
+          [(ngModel)]="username"
+          [ngModelOptions]="{ standalone: true }"
+        />
+        <label class="fontTypeSmall"> Username</label>
+      </div>
+      <div class="formBox">
+        <input
+          placeholder=" "
+          [(ngModel)]="title"
+          [ngModelOptions]="{ standalone: true }"
+        />
+        <label class="fontTypeSmall"> Title</label>
+      </div>
+    </form>
+
+    <angular-editor
+      [(ngModel)]="content"
+      [config]="editorConfig"
+    ></angular-editor>
+
+    <div class="btnSaveDiv">
+      <button class="btnSave fontTypeSmall" (click)="post()">Save</button>
+    </div>
+  </div>
+  <app-snackbar></app-snackbar>
+  <div class="btnBack">
+    <button class="btnBackStyle fontTypeSmall" routerLink="/blog">
+      <span
+        class="material-symbols-outlined"
+        style="margin-top: 0; margin-right: 15px; font-size: 20px"
+      >
+        arrow_back
+      </span>
+      Back
+    </button>
+  </div>
+</div>

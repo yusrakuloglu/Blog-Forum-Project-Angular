@@ -1,0 +1,43 @@
+.headerDiv {
+  background-color: rgb(220, 45, 121);
+  color: rgb(254, 246, 237);
+  width: 100%;
+  height: 80px;
+  overflow: hidden;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+}
+.btnLogOut {
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  color: rgb(254, 246, 237);
+  padding: 8px 10px;
+  transition: 2s;
+  width: 110px;
+  box-shadow: rgb(0, 0, 0) 0px 0px 13px -4px;
+  border-radius: 10px;
+  background: rgb(223, 28, 113);
+  font-weight: 400 !important;
+}
+.btnLogOut:hover {
+  transform: 100ms;
+  box-shadow: rgb(0, 0, 0) 0px 0px 13px 1px;
+  background: rgb(218, 25, 109);
+}
+.homeButtons {
+  display: flex;
+  margin-left: 35px;
+  visibility: visible;
+  position: absolute;
+  top: 70px;
+  left: 33%;
+  transition: all 0.5s ease;
+}
+.title {
+  cursor: pointer;
+  position: relative;
+}

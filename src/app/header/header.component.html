@@ -1,0 +1,12 @@
+<div class="headerDiv fontType">
+  <h2 (click)="loginOrOptions()" class="title">Talk&Write</h2>
+  <button
+    class="btnLogOut fontType"
+    *ngIf="
+      userService.user != undefined && !isHomePage && !isLoginOrNewUserPage
+    "
+    (click)="logout()"
+  >
+    Log Out
+  </button>
+</div>

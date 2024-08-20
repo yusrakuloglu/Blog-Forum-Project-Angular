@@ -1,0 +1,50 @@
+<div class="contentMain">
+  <h2>Answer a question that you want</h2>
+  <div *ngIf="questionObj !== undefined">
+    <div
+      class="contentCard"
+      *ngFor="let item of questionObj.solutions; let i = index"
+    >
+      <div class="scoreButtons fontTypeSmall">
+        <button
+          class="material-symbols-outlined"
+          [class.coloredIcon]="item.plus.indexOf(userService.user.id) >= 0"
+          (click)="vote(i, 1)"
+        >
+          arrow_upward
+        </button>
+        <span style="font-size: large">{{
+          item.plus.length - item.minus.length
+        }}</span>
+        <button
+          class="material-symbols-outlined"
+          [class.coloredIcon]="item.minus.indexOf(userService.user.id) >= 0"
+          (click)="vote(i, -1)"
+        >
+          arrow_downward
+        </button>
+      </div>
+      <div class="userQuestion fontTypeSmall">
+        <h4 style="margin-bottom: -10px">
+          {{ item.username }}
+        </h4>
+        <p>{{ item.solution }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="textButton">
+    <textarea
+      [(ngModel)]="solutionText"
+      rows="8"
+      cols="70"
+      class="textArea"
+    ></textarea>
+    <div class="btnDiv">
+      <button class="btnContent fontTypeSmall" (click)="post()">Save</button>
+    </div>
+  </div>
+</div>
+<div class="backBtnDiv">
+  <button class="btnBack fontTypeSmall" (click)="back()">Back</button>
+</div>

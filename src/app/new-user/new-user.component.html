@@ -1,0 +1,76 @@
+<div class="loginBox fontType">
+  <h2>Create Account</h2>
+  <form [formGroup]="createForm">
+    <div class="userBox fontTypeSmall">
+      <input formControlName="email" placeholder="Enter Email " type="text" />
+      <label>Email</label>
+      <div
+        class="errorMessage"
+        *ngIf="
+          f['email'].invalid && (f['email'].touched || f['username'].dirty)
+        "
+      >
+        <p *ngIf="f['email'].errors?.['required']">Email is required!</p>
+        <p *ngIf="f['email'].errors?.['email']">
+          Email must be in the correct format
+        </p>
+      </div>
+    </div>
+    <div class="userBox fontTypeSmall">
+      <input
+        formControlName="username"
+        placeholder="Enter Username "
+        type="text"
+      />
+      <label> Username</label>
+      <div
+        class="errorMessage"
+        *ngIf="
+          f['username'].invalid &&
+          (f['username'].touched || f['username'].dirty)
+        "
+      >
+        <p *ngIf="f['username'].errors && f['username'].errors['required']">
+          Username is required!
+        </p>
+      </div>
+    </div>
+    <div class="userBox fontTypeSmall">
+      <div class="inputGroup">
+        <input
+          formControlName="password"
+          placeholder=" Password "
+          [type]="showPassword ? 'text' : 'password'"
+        />
+        <span class="material-symbols-outlined" (click)="togglePasword()">
+          {{ showPassword ? "visibility" : "visibility_off" }}
+        </span>
+        <label> Password </label>
+      </div>
+      <div
+        class="errorMessage"
+        *ngIf="
+          f['password'].invalid &&
+          (f['password'].touched || f['password'].dirty)
+        "
+      >
+        <p *ngIf="f['password'].errors?.['required']">Password is required!</p>
+        <p *ngIf="f['password'].errors?.['minlength']">
+          Password must be at least 10 characters!
+        </p>
+      </div>
+    </div>
+  </form>
+  <div class="btnDiv">
+    <button
+      class="btnLogIn"
+      [disabled]="createForm.invalid"
+      (click)="createAccount()"
+    >
+      Register
+    </button>
+    <p>or</p>
+    <button class="btnRegister" routerLink="/login">Log In</button>
+    <!-- {{ createForm.value | json }} -->
+  </div>
+</div>

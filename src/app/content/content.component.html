@@ -1,0 +1,38 @@
+<div class="contentMain">
+  <textarea
+    [(ngModel)]="question"
+    rows="8"
+    cols="70"
+    class="textArea fontTypeSmall"
+    placeholder="What Would You Want To Ask ?"
+  ></textarea>
+
+  <button
+    class="btnContent fontTypeSmall"
+    [disabled]="question.trim() == ''"
+    (click)="post()"
+  >
+    Send
+  </button>
+  <div
+    *ngFor="let item of questionList"
+    class="contentCard fontTypeSmall"
+    [routerLink]="'/solutions/' + item.id"
+  >
+    <div>
+      <h3>{{ item.username }}</h3>
+      <p>{{ item.question }}</p>
+    </div>
+  </div>
+  <div class="btnBack">
+    <button class="btnBackStyle fontTypeSmall" routerLink="/options">
+      <span
+        class="material-symbols-outlined"
+        style="margin-top: 0; margin-right: 15px; font-size: 20px"
+      >
+        arrow_back
+      </span>
+      Back
+    </button>
+  </div>
+</div>

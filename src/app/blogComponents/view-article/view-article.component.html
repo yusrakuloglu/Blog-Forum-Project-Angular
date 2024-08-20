@@ -1,0 +1,53 @@
+<div class="mainDiv">
+  <div
+    class="card fontTypeSmall"
+    *ngIf="articlesData && articlesData[articleIndex]"
+  >
+    <div class="cardContent">
+      <h1 class="title">{{ articlesData[articleIndex].title }}</h1>
+      <p class="description">{{ articlesData[articleIndex].content }}</p>
+      <p class="author">Author: {{ articlesData[articleIndex].author }}</p>
+    </div>
+
+    <div class="comments fontTypeSmall">
+      <span *ngFor="let comment of articlesData[this.articleIndex].comments"
+        ><span>{{ comment.username }}: </span>
+        <span> {{ comment.comment }}</span></span
+      >
+    </div>
+
+    <form class="form">
+      <div class="formBox">
+        <input
+          placeholder=" "
+          [(ngModel)]="username"
+          [ngModelOptions]="{ standalone: true }"
+        />
+        <label class="fontTypeSmall"> Username</label>
+      </div>
+      <div class="formBox">
+        <input
+          placeholder=" "
+          [(ngModel)]="comment"
+          [ngModelOptions]="{ standalone: true }"
+        />
+        <label class="fontTypeSmall"> Comment</label>
+      </div>
+    </form>
+
+    <div class="btnSaveDiv">
+      <button class="btnSave" (click)="addComment()">Save</button>
+    </div>
+  </div>
+  <div class="btnBack">
+    <button class="btnBackStyle fontTypeSmall" routerLink="/options">
+      <span
+        class="material-symbols-outlined"
+        style="margin-top: 0; margin-right: 15px; font-size: 20px"
+      >
+        arrow_back
+      </span>
+      Back
+    </button>
+  </div>
+</div>

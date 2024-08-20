@@ -1,0 +1,90 @@
+.contentMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -10px;
+}
+.textArea {
+  background-color: rgb(244, 227, 235);
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+}
+.contentCard {
+  display: flex;
+  margin: 0px;
+  background-color: rgb(131, 131, 130);
+  padding: 20px;
+  width: 100px;
+  border-radius: 9px;
+  box-shadow: black 0px 2px 9px -2px;
+  text-align: left;
+  width: 100%;
+  max-width: 580px;
+  box-sizing: border-box;
+  margin-bottom: 60px;
+}
+.scoreButtons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.material-symbols-outlined {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-weight: 400;
+}
+.userQuestion {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.btnContent {
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  color: rgb(0, 0, 0);
+  padding: 8px 10px;
+  transition: none;
+  width: 110px;
+  box-shadow: rgb(0, 0, 0) 0px 0px 13px -4px;
+  border-radius: 10px;
+  background: rgb(196, 206, 207);
+  font-weight: 400 !important;
+  margin-top: 20px;
+}
+.textButton {
+  display: flex;
+  flex-direction: column;
+}
+
+.btnContent:disabled {
+  cursor: default;
+  background-color: rgb(189, 188, 186);
+  color: rgb(117, 115, 115);
+}
+
+.backBtnDiv {
+  position: fixed;
+  left: 50px;
+  bottom: 50px;
+}
+.btnBack {
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  color: rgb(255, 253, 253);
+  padding: 10px 10px;
+  transition: none;
+  width: 130px;
+  box-shadow: rgb(0, 0, 0) 0px 0px 13px -4px;
+  border-radius: 10px;
+  background: rgb(223, 28, 113);
+  font-weight: 400 !important;
+}
+
+.coloredIcon {
+  color: azure;
+}

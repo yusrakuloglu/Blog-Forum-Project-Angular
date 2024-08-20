@@ -1,0 +1,150 @@
+.loginBox {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  width: 400px;
+  height: auto;
+  padding: 20px 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+}
+.loginBox h2 {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+.userBox {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.userBox input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #000000;
+  border: none;
+  border-bottom: 1px solid #000000;
+  outline: none;
+  background: transparent;
+}
+
+.userBox input::placeholder {
+  color: rgb(163, 159, 159);
+  transition: none;
+}
+.userBox input:focus::placeholder {
+  color: transparent;
+  transition: none;
+}
+.userBox label {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  padding: 10px 0;
+  font-size: 16px;
+  color: transparent;
+  pointer-events: none;
+  transform: translateY(0);
+  transition: none;
+}
+
+.userBox input:focus ~ label,
+.userBox input:not(:placeholder-shown) ~ label {
+  transform: translateY(-20px);
+  left: 0;
+  color: #070707;
+  font-size: 12px;
+  transition:
+    color 0.5s ease,
+    font-size 0.5s ease;
+}
+.userBox input.ng-invalid.ng-touched {
+  border-bottom: 1px solid #ff0000; /* Hata durumunda kırmızı border */
+}
+.userBox input.ng-invalid.ng-dirty {
+  border-bottom: 1px solid #ff0000; /* Yazarken hata varsa kırmızı border */
+}
+.userBox input.ng-invalid.ng-touched + label {
+  transform: translateY(-20px);
+  left: 0;
+  color: red;
+  font-size: 12px;
+  transition: none;
+}
+.userBox input.ng-invalid.ng-dirty + label {
+  transform: translateY(-20px);
+  left: 0;
+  color: red;
+  font-size: 12px;
+  transition: none;
+}
+
+.btnDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btnLogIn {
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  color: rgb(254, 246, 237);
+  padding: 8px 10px;
+  transition: 2s;
+  width: 110px;
+  box-shadow: rgb(0, 0, 0) 0px 0px 13px -4px;
+  border-radius: 10px;
+  background: rgb(223, 28, 113);
+  font-weight: 400 !important;
+  margin-top: -8px;
+  margin-bottom: -3px;
+}
+
+.btnLogIn:disabled {
+  cursor: pointer;
+  border: none;
+  font-size: 14px;
+  color: rgb(254, 246, 237);
+  padding: 8px 10px;
+  transition: none;
+  width: 110px;
+  box-shadow: rgb(0, 0, 0) 0px 0px 13px -4px;
+  border-radius: 10px;
+  background: rgb(231, 113, 164);
+  font-weight: 400 !important;
+  margin-top: -8px;
+  margin-bottom: -3px;
+}
+.btnRegister {
+  color: rgb(223, 28, 113);
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: 15px;
+  padding: 5px;
+  width: 70px;
+  margin-top: -9px;
+  font-weight: 400;
+}
+
+.btnRegister:hover {
+  font-weight: 900;
+  cursor: pointer;
+  border-bottom: 1px solid black;
+  background-color: transparent;
+  font-size: 15px;
+}
+
+.inputGroup {
+  display: flex;
+  align-items: center;
+}
+.material-symbols-outlined {
+  cursor: pointer;
+  margin-top: 0;
+}

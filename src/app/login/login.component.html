@@ -1,0 +1,54 @@
+<div class="loginBox fontType">
+  <h2>Log In</h2>
+  <form [formGroup]="loginForm">
+    <div class="userBox fontTypeSmall">
+      <input formControlName="email" placeholder=" " type="text" />
+      <label>Email</label>
+      <div
+        class="errorMessage"
+        *ngIf="f['email'].invalid && (f['email'].touched || f['email'].dirty)"
+      >
+        <p *ngIf="f['email'].errors && f['email'].errors['required']">
+          Email is required!
+        </p>
+        <p *ngIf="f['email'].errors && f['email'].errors['email']">
+          Email must be in the correct format
+        </p>
+      </div>
+    </div>
+    <div class="userBox fontTypeSmall">
+      <div class="inputGroup">
+        <input
+          formControlName="password"
+          placeholder=" "
+          [type]="showPassword ? 'text' : 'password'"
+        />
+        <span class="material-symbols-outlined" (click)="togglePasword()">
+          {{ showPassword ? "visibility" : "visibility_off" }}
+        </span>
+        <label> Password </label>
+      </div>
+
+      <div
+        class="errorMessage"
+        *ngIf="
+          f['password'].invalid &&
+          (f['password'].touched || f['password'].dirty)
+        "
+      >
+        <p *ngIf="f['password'].errors?.['required']">Password is required!</p>
+        <p *ngIf="f['password'].errors?.['minlength']">
+          Password must be at least 10 characters!
+        </p>
+      </div>
+    </div>
+  </form>
+
+  <div class="btnDiv">
+    <button class="btnLogIn" (click)="login()">Log In</button>
+    <p>or</p>
+    <button class="btnRegister" routerLink="/newuser">Register</button>
+    <!-- {{ loginForm.value | json }} -->
+  </div>
+</div>
+<app-snackbar></app-snackbar>
